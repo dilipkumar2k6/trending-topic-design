@@ -23,7 +23,7 @@ Two approach
 # Sliding window
 - maintain a hash table with topic and tweet count over the last 10 seconds
 - Every seconds, update the dictionary
-    - Add new topic tweet count over the last seconds from the database
+    - Add new topic tweet count over the last seconds in the database
     - Remove tweet that are no longer in 10 seconds window
 - Return topmost hashtags in the hash table
 
