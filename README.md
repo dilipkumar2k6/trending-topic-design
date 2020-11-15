@@ -5,6 +5,7 @@
 # Simple approach
 - Client requests for trending topics
 - Server fetches the latest tweet in the last ten seconds from the database and return the top K hashtags as trending topics
+
 Issues?
 - Not scalable
 - Query database is expensive as same data is queried again and again
@@ -12,8 +13,10 @@ Issues?
 - Add load balancer
 - multiple servers handling request
 - Master slave architecture, and read from slave database
+
 Issue?
 - Every 10 seconds, you end up query same tags
+
 Two approach
 - Sliding window
 - Caching
