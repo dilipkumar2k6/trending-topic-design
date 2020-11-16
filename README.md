@@ -150,4 +150,6 @@ https://www.youtube.com/watch?v=RMuLavkPLwc
 
 http://sayrohan.blogspot.com/2013/06/finding-trending-topics-and-trending.html
 
+https://blog.twitter.com/official/en_us/a/2015/trend-detection-social-data.html
+
 
