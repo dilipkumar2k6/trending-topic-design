@@ -36,7 +36,7 @@ A B C A A D C A B C
     - Two approach
         - Sort hash table as per frequency (nlogn)
         - Use min heap data structure of size K (nlogk)
-# Approach 3: Scalable approach 
+# Approach 2: Scalable approach 
 ![](assets/multi-host-top-k.png)
 Problems:
 - To much memory consumed by processor nodes as well as storage node

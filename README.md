@@ -144,12 +144,14 @@ Object getAggregateInfoAndSlide();
 ```
 - Size of each document: 2*4 bytes + 8 bytes + 2400 bytes ~ 2500bytes ~ 2.5kb
 - In an hour: 15kb
-
 # Reference
 https://www.youtube.com/watch?v=RMuLavkPLwc
 
 http://sayrohan.blogspot.com/2013/06/finding-trending-topics-and-trending.html
 
 https://blog.twitter.com/official/en_us/a/2015/trend-detection-social-data.html
+
+
+https://www.igvita.com/2010/01/06/flow-analysis-time-based-bloom-filters/
 
 
