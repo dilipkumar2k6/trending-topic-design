@@ -35,9 +35,12 @@ Issues?
     - total count
     - total positive sentiment score
     - total negative sentiment score 
-![](http://3.bp.blogspot.com/-hDe2ksEnvOU/Ua__AOFTphI/AAAAAAAABqQ/2_6es6oLG5s/s1600/image006.gif)
+
+    ![](http://3.bp.blogspot.com/-hDe2ksEnvOU/Ua__AOFTphI/AAAAAAAABqQ/2_6es6oLG5s/s1600/image006.gif)
 - For implementing the “Window” concept, Circular Linked List data structure is used. Below figure, shows how the window can be modeled as Circular Linked List.
+
 ![](http://1.bp.blogspot.com/-W9juuzj-ID4/Ua__HIgDmaI/AAAAAAAABqY/MuMMC8iiJnE/s1600/image007.gif)
+
 ![](http://3.bp.blogspot.com/-6vuXJzDDl1E/Ua__MBLkrNI/AAAAAAAABqg/XwF-oIYKJ2U/s1600/image008.gif)
 - Elegant thing about the representation of the Window as a Circular Linked List is that circular linked list implementation only need to expose two APIs:
 ```
@@ -53,8 +56,10 @@ Object getAggregateInfoAndSlide();
 - Window mechanism described only tracks activity for one topic. 
 - But, for finding top topics it is required to monitor activity for all the topics which are encountered in last one hour time period. 
 - For tracking activity for all the topics, a Map data structure is used, where key is the topic name and value is the pointer to the “Window” or the Circular Linked List. Below figure, shows the data structure.
+
 ![](http://1.bp.blogspot.com/-XpauA8orH4c/Ua__SbOHeKI/AAAAAAAABqo/pP6GlbkKQqs/s1600/image009.gif)
 - Approach for finding Top Topics from the Twitter Stream
+
 ![](http://3.bp.blogspot.com/-4yxboi74zK8/Ua__YPUY52I/AAAAAAAABqw/Vgb_Une2ITU/s1600/image010.gif)
 
 ## Buffer Incoming Data
@@ -62,6 +67,7 @@ Object getAggregateInfoAndSlide();
 - twitter4j library is used for the subscription. 
 - Once subscribed, it would receive live tweets from Twitter, and the modules buffers the incoming tweets, retrieves the tweet message, and then pass the tweet to the next module (Filter Content) for the processing of the tweets. 
 - Following shows the buffered tweets and the output from the module
+
 ![](http://2.bp.blogspot.com/-w29jrQBp61g/Ua__eGq1GbI/AAAAAAAABq4/1IDbQdVBU8g/s1600/image011.gif)
 ## Filter Content
 - This module receives a tweet message and is responsible for extracting relevant information from the tweet message and passing the relevant information to the next phase. 
@@ -71,6 +77,7 @@ Object getAggregateInfoAndSlide();
     - Negative Sentiment Score: Send the tweet message to the “Sentiment Calculator” and if the sentiment score is negative then store the score as negative sentiment score
 - For each topic retrieved, pass the topic name, positive and negative sentiment score to the next module. 
 - Following figure describes the module:
+
 ![](http://1.bp.blogspot.com/-xyx-XIswVGs/Ua__he1yhuI/AAAAAAAABrA/98mYrqbZTUs/s1600/image012.gif)
 ## Sentiment Calculator
 - This module receives tweet message and it calculates the sentiment score for the message and returns the sentiment score to the caller. 
@@ -82,6 +89,7 @@ Object getAggregateInfoAndSlide();
 - It then does a lookup in its Map to find the window/circular link list, for the topic name. 
 - If no record found then a new entry is added to the map with the topic name and the object is added to the latest pane. 
 - If the record exists then the object is added to the latest pane.
+
 ![](http://2.bp.blogspot.com/-FE22tmy18ho/Ua__lWH4SnI/AAAAAAAABrI/cMo8WI6NTdo/s1600/image013.gif)
 ## Slide and Send Window Summary
 - This is not a separate module, but a logical different part of “Update HashTag Summary” module. 
