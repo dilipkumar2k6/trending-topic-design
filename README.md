@@ -114,7 +114,8 @@ Object getAggregateInfoAndSlide();
 ![](http://2.bp.blogspot.com/-bHAN-RYsdGQ/Ua__0-V7T0I/AAAAAAAABrg/KP9_CN2uA10/s1600/image016.gif)
 ![](http://4.bp.blogspot.com/-nw7FUSaYgFk/Ua__5dHdRDI/AAAAAAAABro/mgmMzenQLA4/s1600/image017.gif)
 ## Local-Z Score Based Ranking
-
+![](http://3.bp.blogspot.com/-At_jVwO7uJk/UbAAkapnkRI/AAAAAAAABr4/76wcSVweRl8/s1600/image019.gif)
+![](http://1.bp.blogspot.com/-MFGRf7b6-_0/UbAAncEvpSI/AAAAAAAABsA/wLIjJ1xdK5E/s1600/image020.gif)
 # Size estimate
 ## How big the in memory hash table?
 - 1 million users per hour
